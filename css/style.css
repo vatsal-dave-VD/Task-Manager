@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+body{
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 2px;
+}
+.heading{
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    background-color: #307852;
+}
+.heading img{
+    margin: 15px 0px 15px 40px;
+    flex:1 1 2vw;
+}
+.heading p{
+    margin-top: 20px;
+    margin-left: 30px;
+    flex:1 1 70vw;
+}
+.modal-content{
+    border-radius: 20px;
+}
+.modal-header{
+    border-radius: 15px 15px 0px 0px;
+    background-color: darkcyan;
+}
+#modalTitle{
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: white;
+}
+.icon-close{
+    font-size: 50px;
+    color: white;
+    text-shadow: none;
+}
+.icon-close:hover{
+    color: red;
+}
+#taskModalFooter button{
+    font-size: 25px;
+}
+.emp-dropdown, .emp-dropdown option
+{
+    font-size: 20px;
+}
+.btn-dropdown{
+    padding:0px 15px;
+}
+.add-task-btn{
+    font-size: 2.8rem;
+    width: 65px;
+    height: 65px;
+    border: none;
+}

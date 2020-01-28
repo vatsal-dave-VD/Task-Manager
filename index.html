@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->	
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <!-- main container -->
+
+    <!-- Heading here -->
+    <div class="heading">
+        <img src="https://lh3.googleusercontent.com/NbxySooCOHfqSAMhBPJ2hrTH_y4Lgk2Mkd8VZlsZFTaQ4icxK2sPnH3k6xVqaiF-M1Y" width="60px">
+        <p>Task Manager</p>
+        <p style="font-size:18px;margin: auto;">We help to prevent worst Diasters!!</p><br>
+    </div>
+    <div class="container">
+        <div class="row" >
+            <!-- employee selection menu -->
+            <div class="form-group col-11 my-4">
+                <select name="empNames" class="form-control emp-dropdown" onchange="displayEmployee(this.value)">
+                    <option value="null" disabled selected>--Select the Employee--</option>
+                    <option value="Sneha Bhatt">Sneha Bhatt</option>
+                    <option value="Harsh Shah">Harsh Shah</option>
+                    <option value="Manvendra Singh">Manvendra Singh</option>
+                    <option value="Hirvi Shah">Hirvi Shah</option>
+                    <option value="Jaimil Noyda">Jaimil Noyda</option>
+                    <option value="Varun Patel">Varun Patel</option>
+                    <option value="Divyam Goswami">Divyam Goswami</option>
+                </select>
+            </div>
+            <!-- Box for employee details to be displayed div -->
+            <div class="col-6">
+                <div class="card" style="max-height: 400px; overflow-y:auto">
+                    <div class="card-header" id="selectedEmpName">
+                        <h4 class="font-weight-bold" id="empDetails">No employee selected</h4>
+                    </div>
+                    
+                    <ul class="list-group list-group-flush" id="singleEmpTasksList">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- box where all tasks are displayed -->
+            <div class="col-6">
+                <div class="card" style="max-height: 400px; overflow-y:auto">
+                    <div class="card-header">
+                        <h4 class="font-weight-bold">All task list</h4>
+                    </div>
+                    <ul class="list-group list-group-flush" id="allTaskList">
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Task Modal -->
+            <!-- Button trigger modal -->
+            <div class="col-12 fixed-bottom d-flex flex-row-reverse align-items-end mb-4 pr-4">
+                <button class="rounded-circle bg-danger text-white add-task-btn" data-toggle="modal" data-target="#taskModal" onclick="addContenttoTaskModal()">+</button>
+            </div>
+            
+            <!-- Modal with the task assigning details  -->
+            <div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                <div class="modal-dialog mw-100 w-75 modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title" id="modalTitle">Assign Task</p>
+                            <button type="button" class="close icon-close" data-dismiss="modal" aria-label="Close">&times;
+                            </button>
+                        </div>
+                        <div class="modal-body" id="taskModalBody">
+
+                        </div>
+                        <div class="modal-footer" id="taskModalFooter">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-outline-success" id="submitBtn" onclick="submitTaskData()">Assign task</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="./js/script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
